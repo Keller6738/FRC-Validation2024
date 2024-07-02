@@ -6,7 +6,6 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj2.command.*;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 
-import static com.revrobotics.CANSparkBase.IdleMode.kBrake;
 import static com.revrobotics.CANSparkLowLevel.MotorType.kBrushless;
 import static edu.wpi.first.wpilibj.DoubleSolenoid.Value.kForward;
 import static edu.wpi.first.wpilibj.DoubleSolenoid.Value.kReverse;
@@ -19,7 +18,7 @@ public class Intake extends SubsystemBase {
     private final DoubleSolenoid intakePiston = new DoubleSolenoid(CTREPCM, PISTON_FORWARD_CHANNEL, PISTON_REVERSE_CHANNEL);
 
     private final DigitalInput beambreak = new DigitalInput(INTAKE_BUTTON_CHANNEL);
-    private Trigger beambreakTrigger = new Trigger(() -> beambreak.get());
+    private final Trigger beambreakTrigger = new Trigger(() -> beambreak.get());
 
     public Intake() {
         intakeFollower.follow(intakeLeader);
