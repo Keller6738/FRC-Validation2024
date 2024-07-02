@@ -33,6 +33,8 @@ public class RobotContainer {
     private void configureBindings() {
         controller.circle().onTrue(rollerGripper.intakeCommand());
         controller.triangle().onTrue(rollerGripper.ejectCommand());
+
+        controller.square().onTrue(intake.intakeCommand());
     }
 
     public Command getAutonomousCommand() {
