@@ -22,7 +22,8 @@ public final class Constants {
     }
 
     public static final class IntakeConstants {
-        public static final int INTAKE_MOTOR_ID = 21;
+        public static final int INTAKE_LEADER_ID = 21;
+        public static final int INTAKE_FOLLOWER_ID = 22;
         public static final int PISTON_FORWARD_CHANNEL = 1;
         public static final int PISTON_REVERSE_CHANNEL = 2;
         public static final int INTAKE_BUTTON_CHANNEL = 1;
